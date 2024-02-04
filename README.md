@@ -8,7 +8,7 @@ Jasson Carvalho
 
 ## Version
 
-0.1.2
+0.1.3
 
 ## Installation
 
@@ -19,7 +19,7 @@ pip install pyjpdf
 ## Usage
 
 ```bash
-import  PyJPDF
+import pyjpdf as PyJPDF
 
 p = PyJPDF.PyjPDFExtract()
 

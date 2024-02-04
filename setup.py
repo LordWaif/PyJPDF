@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='PyJPDF',
-    version='0.1.2',
+    version='0.1.3',
     author='Jasson Carvalho',
     description='A simple library to extract text from PDF files.',
     url='https://github.com/LordWaif/PyJPDF',
