@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='PyJPDF',
-    version='0.1.1',
+    version='0.1.2',
     author='Jasson Carvalho',
     description='A simple library to extract text from PDF files.',
     url='https://github.com/LordWaif/PyJPDF',
@@ -21,7 +21,7 @@ setup(
         'Programming Language :: Python :: 3.10',
     ],
     python_requires='>=3.6',
-    py_modules=['pyjpdf'],
+    py_modules=['pyjpdf','utils'],
     install_requires=[
         'selenium',
         'pyperclip',

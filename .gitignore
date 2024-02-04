@@ -3,6 +3,7 @@ venv/
 __pycache__/
 
 # Distribution / packaging
+.pypirc
 .Python
 build/
 develop-eggs/
