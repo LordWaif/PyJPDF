@@ -1,4 +1,4 @@
-from .utils import from_buffer,from_path,from_url
+from utils import from_buffer,from_path,from_url
 import platform
 
 class PyjPDFExtract:
@@ -24,7 +24,7 @@ class PyjPDFExtract:
         """
         return from_buffer(stream, *args, **kwargs)
     
-    def from_path(self, path, *args, **kwargs):
+    def from_file(self, path, *args, **kwargs):
         """
         Load a PDF document from a file path.
 

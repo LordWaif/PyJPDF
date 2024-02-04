@@ -11,7 +11,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import tempfile
+import tempfile,os
 
 def convertPDF(pdf_path_input, pdf_path_output = None,max_tries=3,executable_path=None,options_list=[],time_beetwen_tries=1,encoding='utf-8'):
     """
@@ -43,12 +43,14 @@ def convertPDF(pdf_path_input, pdf_path_output = None,max_tries=3,executable_pat
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
     else:
         driver = webdriver.Chrome(executable_path=executable_path, options=options)
+    # Obatain absolute path
+    pdf_path_input = os.path.abspath(pdf_path_input)
     driver.get('file:///'+pdf_path_input)
     driver.minimize_window()
 
     chrome_version = driver.capabilities['chrome']['chromedriverVersion']
     # print(f"Versão do ChromeDriver: {chrome_version}")
-
+ 
     embed_elemento = WebDriverWait(driver, 10).until(
         EC.visibility_of_element_located((By.TAG_NAME, 'embed'))
     )
